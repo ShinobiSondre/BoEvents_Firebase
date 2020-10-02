@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.GsonBuilder
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.fullscreen_dialog.view.*
@@ -34,6 +35,10 @@ import java.sql.DriverManager
 import java.sql.SQLException
 import java.util.*
 import kotlin.collections.ArrayList
+import com.google.firebase.auth.FirebaseAuthMultiFactorException
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -41,6 +46,11 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
     //Login Dialog
     private lateinit var closeDialog: AlertDialog;
+    private lateinit var auth: FirebaseAuth
+// ...
+// Initialize Firebase Auth
+
+
     //Nytt Event Dialog
     private lateinit var closeDialog1 : AlertDialog;
 
@@ -161,6 +171,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         dialog1.fullscreen_dialog_action.setOnClickListener(){
 
             closeDialog1.show()
+
+            auth = Firebase.auth
         }
 
 
