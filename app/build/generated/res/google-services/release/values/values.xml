@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">366288744181-4da9sqb5nkjnsn3lfh1o3qtghq8c74d8.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://bo-events.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">366288744181</string>
+    <string name="google_api_key" translatable="false">AIzaSyB2Wi7zVIe_RcgwfN5iag-Q2uRssyg1yRc</string>
+    <string name="google_app_id" translatable="false">1:366288744181:android:b4278f413b202417199fbc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB2Wi7zVIe_RcgwfN5iag-Q2uRssyg1yRc</string>
+    <string name="google_storage_bucket" translatable="false">bo-events.appspot.com</string>
+    <string name="project_id" translatable="false">bo-events</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="450dp"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:padding="5dp"
+    >
+
+    <ImageButton
+        android:id="@+id/close_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1dp"
+        app:srcCompat="@drawable/ic_close" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/brukernavnfelt"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/close_login"
+        android:hint="Brukernavn" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passordfelt"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brukernavnfelt"
+        android:inputType="textPassword"
+        android:hint="Passord"
+
+    />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="345dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/passordfelt"
+        android:layout_marginTop="22dp"
+        android:background="@color/design_default_color_primary_variant"
+        android:clickable="true"
+        android:text="Logg inn"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

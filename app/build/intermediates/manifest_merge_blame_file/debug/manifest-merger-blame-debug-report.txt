@@ -1,0 +1,205 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.logg_inn"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="27"
+8-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml
+10
+11    <!--
+12         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+13         Google Maps Android API v2, but you must specify either coarse or fine
+14         location permissions for the "MyLocation" functionality.
+15    -->
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:10:5-79
+16-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:10:22-76
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:11:5-66
+17-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:11:22-64
+18
+19    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+20    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2dbb733896bee429efcfe1612bd9f0cf\jetified-firebase-storage-19.2.0\AndroidManifest.xml:26:5-79
+21-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2dbb733896bee429efcfe1612bd9f0cf\jetified-firebase-storage-19.2.0\AndroidManifest.xml:26:22-76
+22
+23    <uses-feature
+23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\17c0b240c79a0221ee906af49d15bc3f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+24        android:glEsVersion="0x00020000"
+24-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\17c0b240c79a0221ee906af49d15bc3f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+25        android:required="true" />
+25-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\17c0b240c79a0221ee906af49d15bc3f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+26
+27    <application
+27-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:13:5-44:19
+28        android:allowBackup="true"
+28-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:14:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\de5d1db60e94bc01567981b5c2f2ad4e\core-1.3.1\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:extractNativeLibs="false"
+32        android:icon="@mipmap/ic_launcher"
+32-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:15:9-43
+33        android:label="@string/app_name"
+33-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:16:9-41
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:17:9-54
+35        android:supportsRtl="true"
+35-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:18:9-35
+36        android:testOnly="true"
+37        android:theme="@style/AppTheme" >
+37-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:19:9-40
+38
+39        <!--
+40             The API key for Google Maps-based APIs is defined as a string resource.
+41             (See the file "res/values/google_maps_api.xml").
+42             Note that the API key is linked to the encryption key used to sign the APK.
+43             You need a different API key for each encryption key, including the release key that is used to
+44             sign the APK for publishing.
+45             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+46        -->
+47        <meta-data
+47-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:29:9-31:55
+48            android:name="com.google.android.geo.API_KEY"
+48-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:30:13-58
+49            android:value="@string/google_maps_key" />
+49-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:31:13-52
+50
+51        <activity
+51-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:33:9-42:20
+52            android:name="com.example.logg_inn.MainActivity"
+52-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:34:13-41
+53            android:label="LoggInn" >
+53-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:35:13-36
+54            <intent-filter>
+54-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:37:13-41:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:38:17-69
+55-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:38:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:40:17-77
+57-->C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\AndroidManifest.xml:40:27-74
+58            </intent-filter>
+59        </activity>
+60
+61        <service
+61-->[com.google.firebase:firebase-auth-ktx:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\26895f5fe7cd87b9044ef261e1c3082a\jetified-firebase-auth-ktx-19.4.0\AndroidManifest.xml:8:9-14:19
+62            android:name="com.google.firebase.components.ComponentDiscoveryService"
+62-->[com.google.firebase:firebase-auth-ktx:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\26895f5fe7cd87b9044ef261e1c3082a\jetified-firebase-auth-ktx-19.4.0\AndroidManifest.xml:9:13-84
+63            android:directBootAware="true"
+63-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+64            android:exported="false" >
+64-->[com.google.firebase:firebase-auth-ktx:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\26895f5fe7cd87b9044ef261e1c3082a\jetified-firebase-auth-ktx-19.4.0\AndroidManifest.xml:10:13-37
+65            <meta-data
+65-->[com.google.firebase:firebase-auth-ktx:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\26895f5fe7cd87b9044ef261e1c3082a\jetified-firebase-auth-ktx-19.4.0\AndroidManifest.xml:11:13-13:85
+66                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+66-->[com.google.firebase:firebase-auth-ktx:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\26895f5fe7cd87b9044ef261e1c3082a\jetified-firebase-auth-ktx-19.4.0\AndroidManifest.xml:12:17-116
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[com.google.firebase:firebase-auth-ktx:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\26895f5fe7cd87b9044ef261e1c3082a\jetified-firebase-auth-ktx-19.4.0\AndroidManifest.xml:13:17-82
+68            <meta-data
+68-->[com.google.firebase:firebase-storage-ktx:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\b47ba412a9f95c2f711f63974e8fb72b\jetified-firebase-storage-ktx-19.2.0\AndroidManifest.xml:15:13-17:85
+69                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar"
+69-->[com.google.firebase:firebase-storage-ktx:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\b47ba412a9f95c2f711f63974e8fb72b\jetified-firebase-storage-ktx-19.2.0\AndroidManifest.xml:16:17-122
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.firebase:firebase-storage-ktx:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\b47ba412a9f95c2f711f63974e8fb72b\jetified-firebase-storage-ktx-19.2.0\AndroidManifest.xml:17:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-database-ktx:19.5.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\5a37a29018702c4f460ba3a66ff9cb8a\jetified-firebase-database-ktx-19.5.0\AndroidManifest.xml:15:13-17:85
+72                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+72-->[com.google.firebase:firebase-database-ktx:19.5.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\5a37a29018702c4f460ba3a66ff9cb8a\jetified-firebase-database-ktx-19.5.0\AndroidManifest.xml:16:17-124
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-database-ktx:19.5.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\5a37a29018702c4f460ba3a66ff9cb8a\jetified-firebase-database-ktx-19.5.0\AndroidManifest.xml:17:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-common-ktx:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2bbbada9d86a3335d0d732d0f265b267\jetified-firebase-common-ktx-19.3.1\AndroidManifest.xml:15:13-17:85
+75                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+75-->[com.google.firebase:firebase-common-ktx:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2bbbada9d86a3335d0d732d0f265b267\jetified-firebase-common-ktx-19.3.1\AndroidManifest.xml:16:17-113
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-common-ktx:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2bbbada9d86a3335d0d732d0f265b267\jetified-firebase-common-ktx-19.3.1\AndroidManifest.xml:17:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2dbb733896bee429efcfe1612bd9f0cf\jetified-firebase-storage-19.2.0\AndroidManifest.xml:33:13-35:85
+78                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+78-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2dbb733896bee429efcfe1612bd9f0cf\jetified-firebase-storage-19.2.0\AndroidManifest.xml:34:17-107
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\2dbb733896bee429efcfe1612bd9f0cf\jetified-firebase-storage-19.2.0\AndroidManifest.xml:35:17-82
+80            <meta-data
+80-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
+81                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+81-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-database:19.5.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\1e7940fbdd7796e09c09a6a0e2ed42e0\jetified-firebase-database-19.5.0\AndroidManifest.xml:32:13-34:85
+84                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+84-->[com.google.firebase:firebase-database:19.5.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\1e7940fbdd7796e09c09a6a0e2ed42e0\jetified-firebase-database-19.5.0\AndroidManifest.xml:33:17-109
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-database:19.5.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\1e7940fbdd7796e09c09a6a0e2ed42e0\jetified-firebase-database-19.5.0\AndroidManifest.xml:34:17-82
+86        </service> <!-- Needs to be explicitly declared on P+ -->
+87        <uses-library
+87-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\17c0b240c79a0221ee906af49d15bc3f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+88            android:name="org.apache.http.legacy"
+88-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\17c0b240c79a0221ee906af49d15bc3f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+89            android:required="false" />
+89-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\17c0b240c79a0221ee906af49d15bc3f\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+90
+91        <activity
+91-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
+92            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+92-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
+93            android:excludeFromRecents="true"
+93-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
+94            android:exported="true"
+94-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
+95            android:launchMode="singleTask"
+95-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
+96            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+96-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
+97            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+97-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\674fd33480f19340e42c2286214a419b\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
+98
+99        <provider
+99-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+100            android:name="com.google.firebase.provider.FirebaseInitProvider"
+100-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+101            android:authorities="com.example.logg_inn.firebaseinitprovider"
+101-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+102            android:directBootAware="true"
+102-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+103            android:exported="false"
+103-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+104            android:initOrder="100" />
+104-->[com.google.firebase:firebase-common:19.3.1] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\cbe2882833292e1a2102139a6e6ea670\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+105
+106        <activity
+106-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\e058274008ac78f99a1b47f464393e1c\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+107            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+107-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\e058274008ac78f99a1b47f464393e1c\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+108            android:exported="false"
+108-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\e058274008ac78f99a1b47f464393e1c\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+109-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\e058274008ac78f99a1b47f464393e1c\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+110
+111        <meta-data
+111-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ba8015e763c8f6dce91f3767e84f9608\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+112            android:name="com.google.android.gms.version"
+112-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ba8015e763c8f6dce91f3767e84f9608\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+113            android:value="@integer/google_play_services_version" />
+113-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ba8015e763c8f6dce91f3767e84f9608\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+114
+115        <provider
+115-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ea3bfd894422b55eb5c8afbc9ca740bb\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+116            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+116-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ea3bfd894422b55eb5c8afbc9ca740bb\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+117            android:authorities="com.example.logg_inn.lifecycle-process"
+117-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ea3bfd894422b55eb5c8afbc9ca740bb\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+118            android:exported="false"
+118-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ea3bfd894422b55eb5c8afbc9ca740bb\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+119            android:multiprocess="true" />
+119-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\narut\.gradle\caches\transforms-2\files-2.1\ea3bfd894422b55eb5c8afbc9ca740bb\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+120    </application>
+121
+122</manifest>
