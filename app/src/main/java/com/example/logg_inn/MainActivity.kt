@@ -1,24 +1,23 @@
 package com.example.logg_inn
 
+import android.accessibilityservice.GestureDescription
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.net.Uri
 import android.os.Bundle
+import android.os.StrictMode
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
-import android.widget.SearchView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -29,7 +28,6 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.tasks.OnFailureListener
@@ -52,12 +50,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.io.IOException
-import java.net.URL
 
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback{
 
     var imageUrls = mutableListOf<String>()
+    private lateinit var picker: TimePicker
 
     //FIREBASE FR
 
@@ -107,6 +105,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+
+
 
 
         //Firebase Auth Anonymous
@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
                         list.add(
                             DataModel(
                                 ds1.child("tittel").value.toString(),
-                                "Her ass was actually nerfed. It was bigger in her victory pose, but they reduced it.",
+                                ds1.child("body").value.toString(),
                                 ds1.child("img").value.toString(),
                                 ds1.child("addresse").value.toString(),
                                 ds1.child("id").value.toString()
@@ -236,6 +236,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         closeDialog1.setContentView(R.layout.fullscreen_dialog)
         editText = closeDialog1.findViewById(R.id.tittel)
         ButtonEventSave = closeDialog1.findViewById(R.id.fullscreen_dialog_action)
+
+        picker = closeDialog1.findViewById<View>(R.id.datePicker1) as TimePicker
+        picker.setIs24HourView(true)
+
+
+
 
 
         //GoogleMaps Fragment
@@ -299,6 +305,14 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         dialog.btnlogin.setOnClickListener {
 
             closeDialog.dismiss()
+
+
+
+            println("Hello")
+
+            picker = closeDialog1.findViewById<View>(R.id.datePicker1) as TimePicker
+
+            println("Hour : " + picker.hour.toString() + "Minute: " + picker.minute.toString() )
         }
 
 
@@ -447,6 +461,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         editText = closeDialog1.findViewById(R.id.addresse)
         var addresse = editText.text.toString()
 
+        editText = closeDialog1.findViewById(R.id.information)
+
+        var body = editText.text.toString()
+
         if(tittel.isEmpty()){
 
             editText.error = "Husk å skrive en tittel til ditt arrangement"
@@ -467,7 +485,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         val lng = getCoordinates(addresse).longitude
 
 
-        val event = com.example.logg_inn.models.Events(eventId,tittel,addresse,lat,lng,imageurl)
+        val event = com.example.logg_inn.models.Events(eventId,tittel,addresse,lat,lng,imageurl,body)
 
 
 
@@ -638,7 +656,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
 
 
         val bø1 = LatLng(59.415326, 9.067200)
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bø1, 13f))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bø1, 15f))
+    }
+
+
+    fun moveCamera(latLng : LatLng){
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13f))
     }
 
 

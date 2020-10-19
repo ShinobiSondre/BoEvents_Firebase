@@ -1,25 +1,21 @@
 package com.example.logg_inn
 
-import android.app.AlertDialog
-import android.app.assist.AssistStructure
-import android.text.Layout
+import android.app.PendingIntent.getActivity
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SimpleAdapter
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.logg_inn.models.DataModel
-import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fullscreen_dialog.*
+import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.layout_event_list_item.view.*
+import kotlinx.coroutines.android.awaitFrame
+
 
 class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
@@ -28,6 +24,7 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
 
     lateinit var closeDialog1 : LayoutInflater
+
 
 
 
@@ -50,8 +47,11 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
 
+
+
             is EventsViewHodler ->{
                 holder.bind(items.get(position))
+
 
 
 
@@ -59,23 +59,46 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
                 holder.itemView.setOnClickListener { p0 ->
 
-                    Log.i("Tittel: " , items.get(position).id.toString())
+                    val activity = p0.context as AppCompatActivity
+                    val eventInfoFragment = EventInfoFragment()
+
+                    val fragmentTransaction = activity.supportFragmentManager.beginTransaction()
+
+
+
+
+                    fragmentTransaction.replace(R.id.drawerLayout, eventInfoFragment)
+
+
+                    fragmentTransaction.commit();
+
 
                     var bilde = items.get(position).image
 
                     var tittel = items.get(position).title
 
-                    var brukernavn = items.get(position).username
+                    var addresse = items.get(position).addresse
+
+                    var body = items.get(position).body
 
 
 
+                        fragmentTransaction.runOnCommit {
 
-                    val activity = p0.context as AppCompatActivity
-                    val eventInfoFragment = EventInfoFragment()
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.drawerLayout, eventInfoFragment)
-                        .addToBackStack(null)
-                        .commit()
+                        eventInfoFragment.getTextView(R.id.event_info_author).setText("bruker01")
+
+                        eventInfoFragment.getTextView(R.id.event_info_title).setText(tittel)
+
+                        eventInfoFragment.getTextView(R.id.event_info_body).setText(body)
+
+                        eventInfoFragment.getTextView(R.id.event_info_sted).setText(addresse)
+
+                        var eventInfoImageView = eventInfoFragment.getImageView(R.id.event_info_image);
+
+                        Glide.with(eventInfoFragment).load(bilde).into(eventInfoImageView);
+
+
+                    }
 
 
 
@@ -121,7 +144,7 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         fun bind(dataModel: DataModel){
 
             eventTitle.text = dataModel.title
-            eventAuthor.text = dataModel.username
+            eventAuthor.text = dataModel.addresse
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.overwatchto)

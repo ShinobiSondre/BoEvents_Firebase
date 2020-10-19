@@ -122,17 +122,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/tittel"
                 tools:ignore="UnknownId" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/information"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="From"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Event Information"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/addresse" />
+                app:layout_constraintTop_toBottomOf="@+id/addresse"
+                tools:ignore="UnknownId" />
+
+\
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -144,81 +148,21 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2">
+                app:layout_constraintTop_toBottomOf="@+id/information">
 
-                <TextView
-                    style="@style/Widget.AppCompat.Spinner"
-                    android:layout_width="0dp"
+                <TimePicker
+                    android:id="@+id/datePicker1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="2"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="Thu, September 13 2018"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    android:timePickerMode="spinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
 
-                <TextView
-                    style="@style/Widget.AppCompat.Spinner"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="Time"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="To"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="3"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-                <TextView
-                    style="@style/Widget.AppCompat.Spinner"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="2"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="End date"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
-
-                <TextView
-                    style="@style/Widget.AppCompat.Spinner"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="Time"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
 
             <CheckBox
                 android:id="@+id/checkBox"
@@ -228,7 +172,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Hele dagen?"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 

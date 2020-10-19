@@ -23,4 +23,13 @@
         android:name="com.example.logg_inn.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/fragment_event_info"
+        android:name="com.example.logg_inn.EventInfoFragment"
+        android:label="fragment_event_info"
+        tools:layout="@layout/fragment_event_info" >
+        <action
+            android:id="@+id/action_eventInfoFragment2_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>
