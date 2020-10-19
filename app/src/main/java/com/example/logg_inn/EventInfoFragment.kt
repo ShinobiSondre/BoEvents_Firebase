@@ -17,8 +17,15 @@ import kotlinx.android.synthetic.main.slideup.*
 import java.lang.ClassCastException
 
 
-class EventInfoFragment : Fragment(R.layout.fragment_event_info) {
+class EventInfoFragment: Fragment(R.layout.fragment_event_info)
 
 
 
-}
+
+
+
+
+
+
+
+

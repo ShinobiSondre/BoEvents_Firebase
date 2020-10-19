@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -15,6 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,7 +43,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
 
-            <TextView
+            <Button
                 android:id="@+id/fullscreen_dialog_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
+
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -92,30 +96,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/tittel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
+                android:hint="Event Tittel"
                 android:layout_marginEnd="16dp"
-                android:text="Event Tittel"
                 android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/addresse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
-                android:text="Adresse"
+                android:hint="Adresse"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/tittel"
+                tools:ignore="UnknownId" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -127,7 +132,7 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintTop_toBottomOf="@+id/addresse" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -225,31 +230,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
+
+
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Timezone"
+                android:text="Bilde Opplastning"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
-            <TextView
-                style="@style/Widget.AppCompat.Spinner"
-                android:layout_width="0dp"
+
+            <Button
+                android:id="@+id/uploadImg"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_weight="2"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Pacific Standard Time"
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Velg Bilde"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

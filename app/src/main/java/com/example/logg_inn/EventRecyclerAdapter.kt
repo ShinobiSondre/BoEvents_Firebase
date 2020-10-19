@@ -1,28 +1,41 @@
 package com.example.logg_inn
 
+import android.app.AlertDialog
+import android.app.assist.AssistStructure
+import android.text.Layout
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SimpleAdapter
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.logg_inn.models.DataModel
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fullscreen_dialog.*
 import kotlinx.android.synthetic.main.layout_event_list_item.view.*
 
 class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     private var items: MutableList<DataModel> = ArrayList()
+    private lateinit var database: DatabaseReference
+
+
+    lateinit var closeDialog1 : LayoutInflater
 
 
 
     fun updateList(list: MutableList<DataModel>){
 
-    items = list;
+    items = list
 
-        notifyDataSetChanged();
+        notifyDataSetChanged()
 
     }
 
@@ -45,12 +58,25 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
                 //Event Info ClickEvent
 
                 holder.itemView.setOnClickListener { p0 ->
+
+                    Log.i("Tittel: " , items.get(position).id.toString())
+
+                    var bilde = items.get(position).image
+
+                    var tittel = items.get(position).title
+
+                    var brukernavn = items.get(position).username
+
+
+
+
                     val activity = p0.context as AppCompatActivity
                     val eventInfoFragment = EventInfoFragment()
                     activity.supportFragmentManager.beginTransaction()
                         .replace(R.id.drawerLayout, eventInfoFragment)
                         .addToBackStack(null)
                         .commit()
+
 
 
                 }
@@ -70,7 +96,7 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     fun getList(): MutableList<DataModel>{
 
-        return items;
+        return items
     }
 
     fun submitList(events: MutableList<DataModel>){
@@ -94,8 +120,8 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
         fun bind(dataModel: DataModel){
 
-            eventTitle.setText(dataModel.title)
-            eventAuthor.setText(dataModel.username)
+            eventTitle.text = dataModel.title
+            eventAuthor.text = dataModel.username
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.overwatchto)

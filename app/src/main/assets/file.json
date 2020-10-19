@@ -4,50 +4,10 @@
       "id": 0,
       "lat": 59.415326,
       "lng": 9.067200,
-      "info": "Søppel Plukking",
-      "bilde": "gunner",
+      "info": "",
+      "bilde": "",
       "txt": "Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah Blahblahblahblah",
       "genre": "samfunn",
-      "link": "https://www.deviantart.com/flygonfan"
-    },
-    {
-      "id": 1,
-      "lat": 59.413121,
-      "lng": 9.072562,
-      "info": "Party",
-      "bilde": "gunner",
-      "txt": "yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety yippity yappety",
-      "genre": "fest",
-      "link": "https://www.deviantart.com/flygonfan"
-    },
-    {
-      "id": 2,
-      "lat": 59.415608,
-      "lng": 9.089288,
-      "info": "Fjelltur",
-      "bilde": "gunner",
-      "txt": "general corporal lietenant soldier army war general corporal lietenant soldier army war general corporal lietenant soldier army war general corporal lietenant soldier army war general corporal lietenant soldier army war general corporal lietenant soldier army war general corporal lietenant soldier army war ",
-      "genre": "sport",
-      "link": "https://www.deviantart.com/flygonfan"
-    },
-    {
-      "id": 3,
-      "lat": 59.432101,
-      "lng": 9.044892,
-      "info": "Grilling",
-      "bilde": "gunner",
-      "txt": "beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop beep boop",
-      "genre": "fest",
-      "link": "https://www.deviantart.com/flygonfan"
-    },
-    {
-      "id": 4,
-      "lat": 59.401337,
-      "lng": 9.073015,
-      "info": "Dark Souls Speedrun",
-      "bilde": "gunner",
-      "txt": "tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker tinker tanker tonker",
-      "genre": "videospill",
       "link": "https://www.deviantart.com/flygonfan"
     }
   ]

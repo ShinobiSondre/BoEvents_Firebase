@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "366288744181",
+    "firebase_url": "https://bo-events.firebaseio.com",
+    "project_id": "bo-events",
+    "storage_bucket": "bo-events.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366288744181:android:b4278f413b202417199fbc",
+        "android_client_info": {
+          "package_name": "com.example.logg_inn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366288744181-f1p7fp8nfs9ueudld3bdldpvl5vugnco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.logg_inn",
+            "certificate_hash": "5bb8727d0aa1d14ec5d196427b534008d1a479aa"
+          }
+        },
+        {
+          "client_id": "366288744181-4da9sqb5nkjnsn3lfh1o3qtghq8c74d8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Wi7zVIe_RcgwfN5iag-Q2uRssyg1yRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366288744181-4da9sqb5nkjnsn3lfh1o3qtghq8c74d8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
