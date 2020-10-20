@@ -3,4 +3,13 @@
     <string name="title_home">Bø Events</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string-array name="spinnerItems">
+        <item>Brettspill</item>
+        <item>Dugnad</item>
+        <item>Fest</item>
+        <item>Musikk</item>
+        <item>Sport</item>
+    </string-array>
+
 </resources>

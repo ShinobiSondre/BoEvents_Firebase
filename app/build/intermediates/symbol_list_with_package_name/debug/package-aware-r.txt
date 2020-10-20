@@ -60,6 +60,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array spinnerItems
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -230,6 +231,10 @@ attr circleCrop
 attr circleRadius
 attr circularInset
 attr circularRadius
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clickAction
 attr closeIcon
 attr closeIconEnabled
@@ -1703,6 +1708,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable grilling
 drawable handel
+drawable hidetaka_miyazaki
 drawable ic_baseline_assignment_ind_24
 drawable ic_clock_black_24dp
 drawable ic_close
@@ -1867,7 +1873,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id checkBox
 id checkbox
 id checked
 id chip
@@ -1971,6 +1976,13 @@ id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
+id grou2
+id group0
+id group1
+id group3
+id group4
+id group5
+id group6
 id group_divider
 id groups
 id guideline
@@ -1994,8 +2006,13 @@ id info
 id information
 id invisible
 id italic
+id item
+id item0
 id item1
 id item2
+id item3
+id item4
+id item5
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -2072,11 +2089,11 @@ id mtrl_picker_title_text
 id multiply
 id my_recycler_view
 id navHeader
-id navHeaderImage
 id navView
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
+id nav_profile_picture
 id navigation_dashboard
 id navigation_header_container
 id navigation_home
@@ -2110,6 +2127,8 @@ id percent
 id pin
 id position
 id postLayout
+id profil_top
+id profile_picture
 id progress_circular
 id progress_horizontal
 id radio
@@ -2160,6 +2179,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id spline
 id split_action_bar
 id spread
@@ -2330,6 +2350,7 @@ layout fragment_home
 layout fullscreen_dialog
 layout items
 layout layout_event_list_item
+layout layout_profil_fragment
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -3281,6 +3302,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable ClockFaceView valueTextColor
 styleable ClockHandView materialCircleRadius selectorSize
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance maxLines scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId

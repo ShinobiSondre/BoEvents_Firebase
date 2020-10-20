@@ -5,5 +5,6 @@ data class DataModel(
     var body: String,
     var image: String,
     val addresse: String,
-    val id: String?
+    val id: String?,
+    val kategori: String
 )

@@ -72,12 +72,16 @@
         "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\layout_items.xml.flat",
-        "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\layout\\items.xml"
+        "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hidetaka_miyazaki.jpg.flat",
+        "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\drawable\\hidetaka_miyazaki.jpg"
     },
     {
         "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\layout_items.xml.flat",
+        "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\layout\\items.xml"
     },
     {
         "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -150,6 +154,10 @@
     {
         "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_profil_fragment.xml.flat",
+        "source": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\src\\main\\res\\layout\\layout_profil_fragment.xml"
     },
     {
         "merged": "C:\\Users\\narut\\Documents\\EventsApp\\Logg_inn\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_event_list_item.xml.flat",

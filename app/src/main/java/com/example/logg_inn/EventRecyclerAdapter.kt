@@ -53,8 +53,6 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
                 holder.bind(items.get(position))
 
 
-
-
                 //Event Info ClickEvent
 
                 holder.itemView.setOnClickListener { p0 ->

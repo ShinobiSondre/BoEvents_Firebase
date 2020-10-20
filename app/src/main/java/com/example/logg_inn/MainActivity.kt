@@ -1,16 +1,16 @@
 package com.example.logg_inn
 
-import android.accessibilityservice.GestureDescription
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.net.Uri
 import android.os.Bundle
-import android.os.StrictMode
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,6 +20,9 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +31,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.tasks.OnFailureListener
@@ -66,6 +70,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
     //NyttEvent Items
     private lateinit var editText: EditText
     private lateinit var ButtonEventSave: Button
+    lateinit var kategorivalgt : String
     private var filePath: Uri = Uri.EMPTY
 
 
@@ -105,7 +110,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-
 
 
 
@@ -178,17 +182,20 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
                                 ds1.child("body").value.toString(),
                                 ds1.child("img").value.toString(),
                                 ds1.child("addresse").value.toString(),
-                                ds1.child("id").value.toString()
+                                ds1.child("id").value.toString(),
+                                ds1.child("kategori").value.toString()
                             )
                         )
 
                         val lat = ds1.child("lat").value.toString().toDouble()
                         val lng = ds1.child("lng").value.toString().toDouble()
 
+                        val kategori = ds1.child("kategori").value.toString()
+
 
                             if(lat != null && lng != null)
 
-                        placeMarkers(ds1.child("tittel").value.toString(),ds1.child("lat").value.toString().toDouble(),ds1.child("lng").value.toString().toDouble())
+                        placeMarkers(ds1.child("tittel").value.toString(),ds1.child("lat").value.toString().toDouble(),ds1.child("lng").value.toString().toDouble(),kategori)
 
 
                     }
@@ -240,6 +247,11 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         picker = closeDialog1.findViewById<View>(R.id.datePicker1) as TimePicker
         picker.setIs24HourView(true)
 
+        //Kategori Spinner
+
+        kategorivalgt = "";
+
+
 
 
 
@@ -276,15 +288,75 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         navView.setNavigationItemSelectedListener {
 
             when (it.itemId) {
-                R.id.item1 -> {
-
+                R.id.item -> {
+//HJEM
                     // Dialog Test : closeDialog.show();
                     System.out.println("Hello1")
+
+
+                    drawerLayout.closeDrawers()
+                    true
+                }
+
+                R.id.item0 -> {
+//PROFIL
+                    // Dialog Test : closeDialog.show();
+                    System.out.println("Hello1")
+
+                    val fragment: Fragment = Profil_Fragment()
+
+                    val fm: FragmentManager = supportFragmentManager
+                    val transaction: FragmentTransaction = fm.beginTransaction()
+                    transaction.replace(R.id.nav_host_fragment, fragment)
+                    transaction.addToBackStack("HOME")
+                    transaction.commit()
+
+                    drawerLayout.closeDrawers()
+                    true
+                }
+
+                R.id.item1 -> {
+//MINE EVENTER
+                    // Dialog Test : closeDialog.show();
+                    System.out.println("Hello1")
+
+                    drawerLayout.closeDrawers()
                     true
                 }
 
                 R.id.item2 -> {
-                    System.out.println("Hello2")
+//PÅMELDTE EVENTER
+                    // Dialog Test : closeDialog.show();
+                    System.out.println("Hello1")
+
+                    drawerLayout.closeDrawers()
+                    true
+                }
+
+                R.id.item3 -> {
+//VENNER
+                    // Dialog Test : closeDialog.show();
+                    System.out.println("Hello1")
+
+                    drawerLayout.closeDrawers()
+                    true
+                }
+
+                R.id.item4 -> {
+//INSTILLINGER
+                    // Dialog Test : closeDialog.show();
+                    System.out.println("Hello1")
+
+                    drawerLayout.closeDrawers()
+                    true
+                }
+
+                R.id.item5 -> {
+//LOGG AV
+                    // Dialog Test : closeDialog.show();
+                    System.out.println("Hello1")
+
+                    drawerLayout.closeDrawers()
                     true
                 }
 
@@ -293,6 +365,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
             }
 
         }
+
 
 
 
@@ -484,8 +557,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
 
         val lng = getCoordinates(addresse).longitude
 
+        val mySpinner = closeDialog1.findViewById<View>(R.id.spinner) as Spinner
 
-        val event = com.example.logg_inn.models.Events(eventId,tittel,addresse,lat,lng,imageurl,body)
+        val kategoriItem = mySpinner.selectedItem.toString()
+
+
+        val event = com.example.logg_inn.models.Events(eventId,tittel,addresse,lat,lng,imageurl,body,kategoriItem)
 
 
 
@@ -689,14 +766,33 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         return latlng
     }
 
-    private fun placeMarkers(tittel : String, lat : Double, lng : Double){
+    private fun placeMarkers(tittel : String, lat : Double, lng : Double, kategori : String){
+
+        var bm : Bitmap
+
+        bm = BitmapFactory.decodeResource(resources, R.drawable.musikk)
+
+        if(kategori=="Musikk")
+            bm = BitmapFactory.decodeResource(resources, R.drawable.musikk)
+        else if(kategori=="Brettspill")
+            bm = BitmapFactory.decodeResource(resources, R.drawable.brettspill)
+        else if(kategori=="Fest")
+            bm = BitmapFactory.decodeResource(resources, R.drawable.fest)
+        else if(kategori=="Dugnad")
+            bm = BitmapFactory.decodeResource(resources, R.drawable.dugnad)
+        else if(kategori=="Sport")
+            bm = BitmapFactory.decodeResource(resources, R.drawable.sport)
+
+
 
         val latLng = LatLng(lat, lng)
         mMap.addMarker(
             MarkerOptions()
                 .position(latLng)
                 .title(tittel)
+                .icon(BitmapDescriptorFactory.fromBitmap(bm))
         )
+
 
     }
 
