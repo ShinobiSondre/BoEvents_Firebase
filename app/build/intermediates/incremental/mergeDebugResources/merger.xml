@@ -6150,7 +6150,7 @@
         <item>Fest</item>
         <item>Musikk</item>
         <item>Sport</item>
-    </string-array></file><file path="C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </string-array><string name="title_notification">Notifications</string></file><file path="C:\Users\narut\Documents\EventsApp\Logg_inn\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

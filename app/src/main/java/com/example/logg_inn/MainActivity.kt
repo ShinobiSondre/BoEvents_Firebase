@@ -733,7 +733,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
 
 
         val bø1 = LatLng(59.415326, 9.067200)
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bø1, 15f))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bø1, 13f))
     }
 
 

@@ -79,6 +79,8 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
                     var body = items.get(position).body
 
+                    var kategori = items.get(position).kategori
+
 
 
                         fragmentTransaction.runOnCommit {
@@ -90,6 +92,8 @@ class EventRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
                         eventInfoFragment.getTextView(R.id.event_info_body).setText(body)
 
                         eventInfoFragment.getTextView(R.id.event_info_sted).setText(addresse)
+
+                            eventInfoFragment.getTextView(R.id.event_info_kategori).setText(kategori)
 
                         var eventInfoImageView = eventInfoFragment.getImageView(R.id.event_info_image);
 
